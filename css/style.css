@@ -1408,3 +1408,176 @@ a {
     }
 
 }
+
+
+/* =================================
+   PÁGINA DE MODALIDADES
+================================= */
+
+.pagina-modalidades {
+    min-height: 750px;
+    padding: 55px 5%;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.95)
+        ),
+        url("../img/banner.png") center / cover no-repeat;
+}
+
+.conteudo-modalidades {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.introducao-modalidades {
+    max-width: 750px;
+    margin: 0 auto 40px;
+
+    text-align: center;
+    color: #ccc;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.lista-modalidades {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card-modalidade-detalhe {
+    position: relative;
+
+    min-height: 250px;
+
+    display: flex;
+    align-items: flex-end;
+
+    background-position: center;
+    background-size: cover;
+
+    border: 1px solid #444;
+    border-radius: 12px;
+
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card-modalidade-detalhe:hover {
+    transform: translateY(-5px);
+    border-color: #ed1c24;
+}
+
+.conteudo-card-modalidade {
+    width: 100%;
+    padding: 25px 20px;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.98)
+    );
+}
+
+.conteudo-card-modalidade h3 {
+    color: white;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.conteudo-card-modalidade p {
+    color: #ddd;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.conteudo-card-modalidade span {
+    color: #ed1c24;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.chamada-modalidades {
+    margin-top: 45px;
+    padding: 30px 20px;
+
+    text-align: center;
+
+    background: linear-gradient(145deg, #222, #111);
+    border: 1px solid #444;
+    border-radius: 12px;
+}
+
+.chamada-modalidades h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.chamada-modalidades p {
+    color: #ccc;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.chamada-modalidades a {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background-color: #ed1c24;
+    color: white;
+
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.chamada-modalidades a:hover {
+    background-color: #b90008;
+    transform: scale(1.05);
+}
+
+
+/* RESPONSIVIDADE DAS MODALIDADES */
+
+@media (max-width: 900px) {
+
+    .lista-modalidades {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .pagina-modalidades {
+        padding: 35px 15px;
+    }
+
+    .lista-modalidades {
+        grid-template-columns: 1fr;
+    }
+
+    .card-modalidade-detalhe {
+        min-height: 230px;
+    }
+
+    .titulo-secao {
+        gap: 12px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 21px;
+        text-align: center;
+    }
+
+    .titulo-secao span {
+        width: 45px;
+    }
+
+}
