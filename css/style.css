@@ -1125,10 +1125,18 @@ a {
    PÁGINA DE HORÁRIOS
 ================================= */
 
+
 .secao-horarios {
     padding: 35px 5%;
-    background-color: #101010;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.534),
+            rgb(0, 0, 0)
+        ),
+        url("../img/banner.png") center / cover no-repeat;
 }
+
 
 .container-horarios {
     display: flex;
@@ -1284,6 +1292,119 @@ a {
     .tabela-aulas td {
         padding: 12px 10px;
         font-size: 12px;
+    }
+
+}
+
+
+/* =================================
+   PÁGINA DE PLANOS
+================================= */
+
+
+.pagina-planos {
+    min-height: 650px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.534),
+            rgb(0, 0, 0)
+        ),
+        url("../img/banner.png") center / cover no-repeat;
+}
+
+
+/* INTRODUÇÃO */
+
+.introducao-planos {
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.introducao-planos p {
+    color: #bbb;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* CARDS DOS PLANOS */
+
+.pagina-planos .secao-planos {
+    padding: 40px 5% 45px;
+}
+
+.pagina-planos .card-plano {
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-beneficios-plano {
+    list-style: none;
+    text-align: left;
+    margin: 15px 0 20px;
+    flex-grow: 1;
+}
+
+.lista-beneficios-plano li {
+    color: #ccc;
+    font-size: 12px;
+    padding: 7px 0;
+    border-bottom: 1px solid #333;
+}
+
+.lista-beneficios-plano li::first-letter {
+    color: #ed1c24;
+}
+
+/* BOTÃO DOS CARDS */
+
+.pagina-planos .card-plano a {
+    margin-top: auto;
+}
+
+/* SEÇÃO FINAL */
+
+.informacao-planos {
+    background-color: #1a1a1a;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.informacao-planos h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.informacao-planos p {
+    color: #bbb;
+    font-size: 13px;
+    margin-bottom: 22px;
+    line-height: 1.6;
+}
+
+.informacao-planos .botao-principal {
+    margin-top: 5px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .pagina-planos .secao-planos {
+        padding: 30px 4%;
+    }
+
+    .introducao-planos p {
+        font-size: 12px;
+    }
+
+    .pagina-planos .card-plano {
+        width: 100%;
+        max-width: 350px;
     }
 
 }
