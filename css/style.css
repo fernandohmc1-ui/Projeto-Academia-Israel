@@ -2028,3 +2028,233 @@ a {
     }
 
 }
+
+
+/* =================================
+   PÁGINA DE TREINOS
+================================= */
+
+/* BANNER */
+
+.pagina-banner-treinos {
+    min-height: 390px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.95),
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.15)
+        ),
+        url("../img/banner.png") center 35% / cover no-repeat;
+}
+
+
+/* INTRODUÇÃO */
+
+.introducao-treinos {
+    padding: 55px 8%;
+    text-align: center;
+    background-color: #101010;
+}
+
+.introducao-treinos > p {
+    max-width: 750px;
+    margin: 20px auto 0;
+    color: #bbb;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* SEÇÃO DOS TREINOS */
+
+.secao-treinos {
+    padding: 45px 6% 65px;
+    background-color: #151515;
+}
+
+.container-treinos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+
+    max-width: 1050px;
+    margin: 40px auto 0;
+}
+
+
+/* CARDS */
+
+.card-treino {
+    background-color: #202020;
+    padding: 30px;
+    border: 1px solid #333;
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.card-treino:hover {
+    transform: translateY(-5px);
+    border-color: #ed1c24;
+}
+
+.icone-treino {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #351113;
+    border-radius: 10px;
+
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.card-treino h3 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.descricao-treino {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 65px;
+    margin-bottom: 20px;
+}
+
+
+/* LISTA DE EXERCÍCIOS */
+
+.card-treino ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.card-treino li {
+    color: #ddd;
+    font-size: 13px;
+    padding: 9px 0;
+    border-bottom: 1px solid #383838;
+}
+
+.card-treino li::before {
+    content: "✓";
+    color: #ed1c24;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+/* IDENTIFICAÇÃO MUSCULAR */
+
+.grupo-muscular {
+    display: inline-block;
+    color: #ed1c24;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+
+/* DICA FINAL */
+
+.dica-treino {
+    padding: 45px 7%;
+    background-color: #101010;
+}
+
+.conteudo-dica {
+    max-width: 1000px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    padding: 30px;
+    background-color: #202020;
+    border-left: 4px solid #ed1c24;
+    border-radius: 5px;
+}
+
+.conteudo-dica > span {
+    font-size: 40px;
+}
+
+.conteudo-dica h2 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.conteudo-dica p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .pagina-banner-treinos {
+        min-height: 430px;
+        background-position: 60% center;
+    }
+
+    .container-treinos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .introducao-treinos {
+        padding: 40px 6%;
+    }
+
+    .secao-treinos {
+        padding: 35px 5% 45px;
+    }
+
+    .card-treino {
+        padding: 25px;
+    }
+
+    .conteudo-dica {
+        align-items: flex-start;
+        padding: 22px;
+    }
+
+    .conteudo-dica h2 {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .pagina-banner-treinos {
+        padding: 30px 5%;
+    }
+
+    .card-treino h3 {
+        font-size: 20px;
+    }
+
+    .conteudo-dica {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .conteudo-dica > span {
+        font-size: 30px;
+    }
+
+}
