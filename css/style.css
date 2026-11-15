@@ -2163,7 +2163,7 @@ a {
     margin-top: 5px;
 }
 
-
+  
 /* DICA FINAL */
 
 .dica-treino {
@@ -2255,6 +2255,563 @@ a {
 
     .conteudo-dica > span {
         font-size: 30px;
+    }
+
+}
+
+
+/* =================================
+   MONTAGEM DE FICHA DE TREINO
+================================= */
+
+.montagem-ficha {
+    padding: 65px 6%;
+    background-color: #101010;
+}
+
+.subtitulo-ficha {
+    color: #aaa;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 18px;
+    margin-bottom: 35px;
+}
+
+
+/* ÁREA PRINCIPAL */
+
+.area-ficha {
+    max-width: 1050px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 25px;
+}
+
+
+/* FORMULÁRIO */
+
+.formulario-ficha,
+.resultado-ficha {
+    background-color: #1d1d1d;
+    border: 1px solid #383838;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.formulario-ficha h3 {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+
+/* CAMPOS */
+
+.campo-ficha {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 20px;
+}
+
+.campo-ficha label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.campo-ficha input,
+.campo-ficha select {
+    width: 100%;
+    padding: 13px;
+
+    background-color: #292929;
+    color: white;
+
+    border: 1px solid #444;
+    border-radius: 5px;
+
+    font-family: inherit;
+    font-size: 12px;
+    outline: none;
+}
+
+.campo-ficha select:focus,
+.campo-ficha input:focus {
+    border-color: #ed1c24;
+}
+
+.campo-ficha select:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* SÉRIES E REPETIÇÕES */
+
+.campos-numericos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+
+/* BOTÃO ADICIONAR */
+
+#adicionar-exercicio {
+    width: 100%;
+    padding: 14px;
+
+    background-color: #ed1c24;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#adicionar-exercicio:hover {
+    background-color: #b90008;
+}
+
+
+/* MENSAGEM */
+
+#mensagem-ficha {
+    font-size: 12px;
+    margin-top: 15px;
+    min-height: 16px;
+    color: #ed1c24;
+}
+
+
+/* CABEÇALHO DA FICHA */
+
+.cabecalho-ficha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 20px;
+    border-bottom: 1px solid #383838;
+}
+
+.cabecalho-ficha span:first-child {
+    color: #ed1c24;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.cabecalho-ficha h3 {
+    font-size: 20px;
+    margin-top: 8px;
+}
+
+.icone-ficha {
+    font-size: 30px;
+}
+
+
+/* FICHA VAZIA */
+
+.ficha-vazia {
+    text-align: center;
+    padding: 55px 10px;
+    color: #aaa;
+}
+
+.ficha-vazia span {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.ficha-vazia p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.ficha-vazia small {
+    font-size: 11px;
+    color: #777;
+}
+
+
+/* ITENS DA FICHA */
+
+.item-ficha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    padding: 16px 0;
+    border-bottom: 1px solid #383838;
+}
+
+.informacoes-exercicio h4 {
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.informacoes-exercicio p {
+    color: #aaa;
+    font-size: 11px;
+}
+
+.informacoes-exercicio span {
+    color: #ed1c24;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.remover-exercicio {
+    background-color: #351113;
+    color: #ff5555;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 9px 12px;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.remover-exercicio:hover {
+    background-color: #55171a;
+}
+
+
+/* RODAPÉ DA FICHA */
+
+.rodape-ficha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.rodape-ficha p {
+    color: #aaa;
+    font-size: 11px;
+}
+
+#limpar-ficha {
+    padding: 10px 13px;
+
+    background-color: transparent;
+    color: #ed1c24;
+
+    border: 1px solid #ed1c24;
+    border-radius: 5px;
+
+    font-size: 11px;
+    cursor: pointer;
+}
+
+#limpar-ficha:hover {
+    background-color: #ed1c24;
+    color: white;
+}
+
+
+/* AVISO */
+
+.aviso-ficha {
+    max-width: 1050px;
+    margin: 20px auto 0;
+
+    color: #777;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .area-ficha {
+        grid-template-columns: 1fr;
+    }
+
+    .montagem-ficha {
+        padding: 45px 5%;
+    }
+
+    .formulario-ficha,
+    .resultado-ficha {
+        padding: 22px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .rodape-ficha {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .item-ficha {
+        align-items: flex-start;
+    }
+
+}
+
+
+
+/* =================================
+   CALCULADORA DE IMC
+================================= */
+
+.secao-imc {
+    padding: 65px 6%;
+    background-color: #171717;
+}
+
+.subtitulo-imc {
+    text-align: center;
+    color: #aaa;
+    font-size: 13px;
+    margin: 18px 0 35px;
+}
+
+.container-imc {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+
+/* FORMULÁRIO */
+
+.formulario-imc,
+.resultado-imc {
+    background-color: #202020;
+    border: 1px solid #383838;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.formulario-imc h3,
+.resultado-imc h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.icone-imc {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.formulario-imc > p {
+    color: #aaa;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+
+/* CAMPOS */
+
+.campo-imc {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 20px;
+}
+
+.campo-imc label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.campo-imc input {
+    padding: 14px;
+    background-color: #292929;
+    color: white;
+
+    border: 1px solid #444;
+    border-radius: 5px;
+
+    outline: none;
+    font-size: 13px;
+}
+
+.campo-imc input:focus {
+    border-color: #ed1c24;
+}
+
+
+/* BOTÃO */
+
+#calcular-imc {
+    width: 100%;
+    padding: 15px;
+
+    background-color: #ed1c24;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#calcular-imc:hover {
+    background-color: #b90008;
+}
+
+#mensagem-imc {
+    color: #ff5555;
+    font-size: 12px;
+    margin-top: 15px;
+    min-height: 16px;
+}
+
+
+/* RESULTADO */
+
+.resultado-imc {
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+.icone-resultado-imc {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.resultado-imc > p {
+    color: #aaa;
+    font-size: 12px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.valor-imc {
+    color: #ed1c24;
+    font-size: 45px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.classificacao-imc {
+    display: inline-block;
+    padding: 9px 18px;
+
+    background-color: #351113;
+    color: #ff5555;
+
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+
+    margin-bottom: 25px;
+}
+
+
+/* RESULTADO ADEQUADO - VERDE */
+
+.resultado-imc.adequado {
+    border-color: #28a745;
+}
+
+.resultado-imc.adequado .valor-imc {
+    color: #28a745;
+}
+
+.resultado-imc.adequado .classificacao-imc {
+    background-color: #153d22;
+    color: #4ade80;
+}
+
+
+/* DEMAIS CLASSIFICAÇÕES - VERMELHO */
+
+.resultado-imc.inadequado {
+    border-color: #ed1c24;
+}
+
+.resultado-imc.inadequado .valor-imc {
+    color: #ff4545;
+}
+
+.resultado-imc.inadequado .classificacao-imc {
+    background-color: #351113;
+    color: #ff5555;
+}
+
+
+/* TABELA DE CLASSIFICAÇÃO */
+
+.classificacoes-imc {
+    text-align: left;
+    border-top: 1px solid #383838;
+}
+
+.classificacoes-imc div {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 13px 0;
+    border-bottom: 1px solid #383838;
+}
+
+.classificacoes-imc span {
+    color: #aaa;
+    font-size: 11px;
+}
+
+.classificacoes-imc strong {
+    color: #ddd;
+    font-size: 11px;
+}
+
+
+/* AVISO */
+
+.aviso-imc {
+    max-width: 1000px;
+    margin: 20px auto 0;
+
+    color: #777;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .container-imc {
+        grid-template-columns: 1fr;
+    }
+
+    .secao-imc {
+        padding: 45px 5%;
+    }
+
+    .formulario-imc,
+    .resultado-imc {
+        padding: 23px;
     }
 
 }

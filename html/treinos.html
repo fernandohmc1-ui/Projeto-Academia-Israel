@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="../css/style.css">
 
-    <script src="js/script.js" defer></script>
+    <script src="../js/script.js" defer></script>
 </head>
 
 <body>
@@ -205,6 +205,264 @@
             </div>
 
         </section>
+
+
+<!-- MONTAGEM DE FICHA DE TREINO -->
+<section class="montagem-ficha" id="montar-ficha">
+
+    <div class="titulo-secao">
+        <span></span>
+        <h2>MONTE SUA FICHA</h2>
+        <span></span>
+    </div>
+
+    <p class="subtitulo-ficha">
+        Escolha seus exercícios e organize sua rotina de treinamento.
+    </p>
+
+    <div class="area-ficha">
+
+        <!-- FORMULÁRIO -->
+        <div class="formulario-ficha">
+
+            <h3>Adicionar exercício</h3>
+
+            <div class="campo-ficha">
+
+                <label for="grupo-muscular">
+                    Grupo muscular
+                </label>
+
+                <select id="grupo-muscular">
+                    <option value="">Selecione um grupo</option>
+                    <option value="Peito">Peito</option>
+                    <option value="Costas">Costas</option>
+                    <option value="Pernas">Pernas</option>
+                    <option value="Braços">Braços</option>
+                </select>
+
+            </div>
+
+            <div class="campo-ficha">
+
+                <label for="exercicio">
+                    Exercício
+                </label>
+
+                <select id="exercicio" disabled>
+                    <option value="">Escolha primeiro o grupo muscular</option>
+                </select>
+
+            </div>
+
+            <div class="campos-numericos">
+
+                <div class="campo-ficha">
+
+                    <label for="series">Séries</label>
+
+                    <input
+                        type="number"
+                        id="series"
+                        min="1"
+                        max="10"
+                        value="3"
+                    >
+
+                </div>
+
+                <div class="campo-ficha">
+
+                    <label for="repeticoes">Repetições</label>
+
+                    <input
+                        type="number"
+                        id="repeticoes"
+                        min="1"
+                        max="50"
+                        value="12"
+                    >
+
+                </div>
+
+            </div>
+
+            <button type="button" id="adicionar-exercicio">
+                + Adicionar exercício
+            </button>
+
+            <p id="mensagem-ficha"></p>
+
+        </div>
+
+        <!-- FICHA DO USUÁRIO -->
+        <div class="resultado-ficha">
+
+            <div class="cabecalho-ficha">
+
+                <div>
+                    <span>MINHA ORGANIZAÇÃO</span>
+                    <h3>Minha ficha de treino</h3>
+                </div>
+
+                <span class="icone-ficha">🏋️</span>
+
+            </div>
+
+            <div id="lista-ficha">
+
+                <div class="ficha-vazia">
+
+                    <span>📋</span>
+
+                    <p>
+                        Sua ficha está vazia.
+                    </p>
+
+                    <small>
+                        Adicione exercícios para começar.
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="rodape-ficha">
+
+                <p id="total-exercicios">
+                    Total de exercícios: 0
+                </p>
+
+                <button type="button" id="limpar-ficha">
+                    Limpar ficha
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <p class="aviso-ficha">
+        Os exercícios e quantidades são exemplos. Procure orientação
+        profissional para definir um treino adequado aos seus objetivos.
+    </p>
+
+</section>
+
+
+<!-- CALCULADORA DE IMC -->
+<section class="secao-imc" id="calculadora-imc">
+
+    <div class="titulo-secao">
+        <span></span>
+        <h2>CALCULADORA DE IMC</h2>
+        <span></span>
+    </div>
+
+    <p class="subtitulo-imc">
+        Descubra seu Índice de Massa Corporal e confira sua classificação.
+    </p>
+
+    <div class="container-imc">
+
+        <!-- FORMULÁRIO -->
+        <div class="formulario-imc">
+
+            <div class="icone-imc">⚖️</div>
+
+            <h3>Calcule seu IMC</h3>
+
+            <p>
+                Informe seus dados abaixo para realizar o cálculo.
+            </p>
+
+            <div class="campo-imc">
+
+                <label for="peso">Seu peso (kg)</label>
+
+                <input
+                    type="number"
+                    id="peso"
+                    placeholder="Exemplo: 70"
+                    min="1"
+                    step="0.1"
+                >
+
+            </div>
+
+            <div class="campo-imc">
+
+                <label for="altura">Sua altura (metros)</label>
+
+                <input
+                    type="number"
+                    id="altura"
+                    placeholder="Exemplo: 1.75"
+                    min="0.5"
+                    max="2.5"
+                    step="0.01"
+                >
+
+            </div>
+
+            <button type="button" id="calcular-imc">
+                CALCULAR IMC
+            </button>
+
+            <p id="mensagem-imc"></p>
+
+        </div>
+
+        <!-- RESULTADO -->
+        <div class="resultado-imc" id="resultado-imc">
+
+            <div class="icone-resultado-imc">📊</div>
+
+            <h3>Seu resultado aparecerá aqui</h3>
+
+            <p>
+                Preencha seu peso e sua altura para descobrir
+                seu índice de massa corporal.
+            </p>
+
+            <div class="classificacoes-imc">
+
+                <div>
+                    <span>Menor que 18,5</span>
+                    <strong>Baixo peso</strong>
+                </div>
+
+                <div>
+                    <span>18,5 até 24,9</span>
+                    <strong>Peso adequado</strong>
+                </div>
+
+                <div>
+                    <span>25 até 29,9</span>
+                    <strong>Sobrepeso</strong>
+                </div>
+
+                <div>
+                    <span>30 ou mais</span>
+                    <strong>Obesidade</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <p class="aviso-imc">
+        O IMC é um indicador geral para adultos e não avalia diretamente
+        a composição corporal. O resultado não substitui uma avaliação
+        profissional.
+    </p>
+
+</section>
+
+
 
         <!-- DICA -->
         <section class="dica-treino">
