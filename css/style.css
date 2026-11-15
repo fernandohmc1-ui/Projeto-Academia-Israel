@@ -1753,3 +1753,278 @@ a {
     }
 
 }
+
+
+/* =================================
+   PÁGINA SOBRE NÓS
+================================= */
+
+.pagina-sobre {
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.95)
+        ),
+        url("../img/banner.png") center / cover no-repeat;
+}
+
+.apresentacao-sobre {
+    padding: 50px 5%;
+}
+
+.conteudo-sobre {
+    max-width: 1150px;
+    margin: 35px auto 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.texto-sobre h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.texto-sobre p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.botao-sobre {
+    display: inline-block;
+    margin-top: 12px;
+
+    padding: 12px 22px;
+
+    background-color: #ed1c24;
+    color: white;
+
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.botao-sobre:hover {
+    background-color: #b90008;
+}
+
+.imagem-sobre {
+    height: 330px;
+    overflow: hidden;
+
+    border-radius: 12px;
+    border: 1px solid #444;
+}
+
+.imagem-sobre img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+    object-position: center;
+
+    transition: 0.4s;
+}
+
+.imagem-sobre img:hover {
+    transform: scale(1.05);
+}
+
+
+/* MISSÃO, VISÃO E VALORES */
+
+.secao-identidade {
+    padding: 45px 5%;
+    background-color: rgba(10, 10, 10, 0.85);
+}
+
+.container-identidade {
+    max-width: 1100px;
+    margin: 35px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card-identidade {
+    padding: 30px 22px;
+
+    text-align: center;
+
+    background: linear-gradient(145deg, #222, #151515);
+
+    border: 1px solid #444;
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.card-identidade:hover {
+    transform: translateY(-5px);
+    border-color: #ed1c24;
+}
+
+.card-identidade span {
+    font-size: 35px;
+}
+
+.card-identidade h3 {
+    color: #ed1c24;
+    font-size: 19px;
+    margin: 15px 0 10px;
+}
+
+.card-identidade p {
+    color: #ccc;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* DIFERENCIAIS */
+
+.secao-diferenciais {
+    padding: 45px 5%;
+}
+
+.container-diferenciais {
+    max-width: 1050px;
+    margin: 35px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.item-diferencial {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+
+    padding: 22px;
+
+    background-color: #181818;
+
+    border: 1px solid #383838;
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.item-diferencial:hover {
+    border-color: #ed1c24;
+}
+
+.item-diferencial > span {
+    font-size: 30px;
+}
+
+.item-diferencial h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.item-diferencial p {
+    color: #bbb;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* CHAMADA FINAL */
+
+.chamada-sobre {
+    margin: 10px 5% 50px;
+    padding: 40px 20px;
+
+    text-align: center;
+
+    background: linear-gradient(145deg, #222, #111);
+
+    border: 1px solid #444;
+    border-radius: 12px;
+}
+
+.chamada-sobre h2 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.chamada-sobre p {
+    color: #ccc;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.chamada-sobre a {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background-color: #ed1c24;
+    color: white;
+
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.chamada-sobre a:hover {
+    background-color: #b90008;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+
+    .conteudo-sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .container-identidade {
+        grid-template-columns: 1fr;
+    }
+
+    .container-diferenciais {
+        grid-template-columns: 1fr;
+    }
+
+    .imagem-sobre {
+        height: 280px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .apresentacao-sobre,
+    .secao-identidade,
+    .secao-diferenciais {
+        padding: 35px 15px;
+    }
+
+    .texto-sobre h3 {
+        font-size: 21px;
+    }
+
+    .chamada-sobre {
+        margin: 10px 15px 35px;
+    }
+
+    .chamada-sobre h2 {
+        font-size: 19px;
+    }
+
+}
